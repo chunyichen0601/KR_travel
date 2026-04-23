@@ -185,10 +185,31 @@
             <span class="text-xs font-medium text-slate-500">4/29 (三)</span>
           </div>
           <h3 class="font-bold text-lg mb-1">釜山航空 Air Busan <span class="text-slate-500 text-sm">(BX 8808)</span></h3>
-          <p class="text-sm text-slate-600 mb-3">釜山 PUS 12:40 ➔ 首爾金浦 GMP 13:45</p>
-          <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 flex justify-between items-center">
-            <span class="text-xs text-slate-500 font-bold">訂位代號</span>
-            <span class="font-bold text-indigo-600 text-lg">XBB6D</span>
+          <p class="text-sm text-slate-600 mb-2">釜山 PUS 12:40 ➔ 首爾金浦 GMP 13:45</p>
+          <div class="flex items-center gap-2 text-xs text-slate-400 mb-4">
+            <span class="bg-slate-100 text-slate-500 px-2 py-0.5 rounded font-medium">經濟艙</span>
+            <span>·</span>
+            <span>空中巴士 A320 (中型)</span>
+            <span>·</span>
+            <span>1h 05m</span>
+          </div>
+          <div class="grid grid-cols-1 gap-2.5">
+            <div class="p-3 border-2 border-indigo-100 rounded-xl bg-indigo-50/30 relative">
+              <div class="absolute -top-2.5 right-3 bg-indigo-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">CHEN CHUNYI</div>
+              <div class="flex justify-between items-center mt-1">
+                <span class="text-[10px] text-slate-500 font-bold">訂位代號</span>
+                <span class="font-bold text-indigo-600 text-lg">XBB6D</span>
+              </div>
+            </div>
+            <div class="p-3 border border-slate-200 rounded-xl bg-slate-50/50 relative">
+              <div class="absolute -top-2.5 right-3 bg-slate-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">FEI WU</div>
+              <div class="mt-1 space-y-1">
+                <div class="flex justify-between items-center">
+                  <span class="text-[10px] text-slate-500 font-bold">訂單編號</span>
+                  <span class="font-bold text-slate-700 text-xs tracking-tight">1616330634899188</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -822,8 +843,8 @@
         { time: "07:00-08:20", coords: [35.0975, 129.0348], transport: "地鐵 ➔ 南浦站", name: "退房 ➔ 南浦站寄物", desc: "告別海雲台，前往南浦站鎖行李。", naver: "남포역", type: "transit" },
         { time: "08:40-09:40", coords: [35.1006, 129.0326], transport: "步行", name: "釜山塔 / 龍頭山公園", desc: "晨遊公園，俯瞰釜山港。", naver: "부산타워", type: "sight" },
         { time: "10:00-11:30", coords: [35.0987, 129.0368], transport: "步行", name: "樂天超市 (光復店)", desc: "採買零食伴手禮，現場裝箱打包。", naver: "롯데마트 광복점", type: "shopping" },
-        { time: "12:20-14:00", coords: [35.1795, 128.9340], transport: "輕軌 ➔ 金海機場", name: "金海機場報到", desc: "提早抵達機場辦理報到手續。", naver: "김해국제공항", type: "transit" },
-        { time: "14:00-15:00", coords: [37.5620, 126.8019], transport: "國內線航班", name: "航班前往首爾", desc: "搭機飛往首爾金浦機場 (BX8808)。", naver: "김포국제공항", type: "transit" },
+        { time: "10:40-12:30", coords: [35.1795, 128.9340], transport: "輕軌 ➔ 金海機場", name: "金海機場報到", desc: "提早兩小時抵達機場，辦理登機手續。", naver: "김해국제공항", type: "transit" },
+        { time: "12:40-13:45", coords: [37.5620, 126.8019], transport: "釜山航空 BX8808", name: "✈️ 釜山 → 首爾金浦", desc: "搭機飛往首爾金浦機場，飛行時間 1小時5分。", naver: "김포국제공항", type: "flight" },
         { time: "16:00-17:30", coords: [37.4842, 126.9297], transport: "地鐵", name: "金浦機場 ➔ 新林站", desc: "領完行李，搭乘地鐵前往新林站。", naver: "신림역", type: "transit" },
         { time: "17:30-18:30", coords: [37.4845, 126.9288], transport: "步行", name: "Sillim Anook 飯店入住", desc: "抵達新林站周邊辦理入住。", naver: "신림역 아늑호텔", type: "transit" },
         { time: "18:50-21:00", coords: [37.4835, 126.9285], transport: "步行", name: "晚餐：新林洞血腸城", desc: "首爾超有名！必吃白炒血腸。", naver: "신림동 순대타운", type: "food" },
@@ -875,6 +896,10 @@
             <span class="text-xs font-bold text-indigo-600 mb-1 flex items-center"><i class="fa-solid fa-location-dot mr-1.5"></i> ${d.city}</span>
             <h2 class="text-xl font-bold text-slate-800 leading-tight">${d.title}</h2>
           </div>
+          <div id="weather-widget" class="flex items-center gap-1.5 bg-sky-50 border border-sky-100 px-3 py-1.5 rounded-xl min-w-[90px] justify-center">
+            <i class="fa-solid fa-spinner fa-spin text-sky-400 text-sm"></i>
+            <span class="text-sky-500 text-[10px]">天氣載入中</span>
+          </div>
         </div>
         <div id="leaflet-map" class="w-full h-48 md:h-56 bg-slate-100 rounded-xl overflow-hidden relative border border-slate-200 z-10"></div>
       `;
@@ -913,39 +938,147 @@
       }
       
       const list = document.getElementById('itinerary-list');
-      list.innerHTML = d.spots.map((s, i) => `
-        <div class="relative group">
-          <div class="absolute -left-[33px] top-1 w-6 h-6 rounded-full border-2 border-white ${s.type === 'pass' ? 'bg-green-500' : 'bg-indigo-500'} shadow-sm flex items-center justify-center">
-            <span class="text-white text-[10px] font-bold">${i + 1}</span>
-          </div>
-          <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200 mb-6 hover:shadow-md transition-shadow">
-            <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
-              <span class="text-xs font-bold text-slate-500 bg-slate-50 px-2 py-1 rounded-md flex items-center"><i class="fa-regular fa-clock mr-1.5"></i>${s.time}</span>
-              <div class="flex gap-1.5">
-                ${s.type === 'shopping' ? '<span class="bg-pink-50 text-pink-600 text-[10px] font-bold px-2 py-1 rounded-md flex items-center"><i class="fa-solid fa-bag-shopping mr-1"></i>購物</span>' : ''}
-                ${s.type === 'pass' ? '<span class="bg-green-50 text-green-600 text-[10px] font-bold px-2 py-1 rounded-md flex items-center"><i class="fa-solid fa-ticket mr-1"></i>VBP 免費</span>' : ''}
-                ${s.type === 'food' ? '<span class="bg-orange-50 text-orange-600 text-[10px] font-bold px-2 py-1 rounded-md flex items-center"><i class="fa-solid fa-utensils mr-1"></i>美食</span>' : ''}
-                ${s.type === 'sight' ? '<span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-2 py-1 rounded-md flex items-center"><i class="fa-solid fa-camera mr-1"></i>景點</span>' : ''}
-                ${s.type === 'transit' ? '<span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-md flex items-center"><i class="fa-solid fa-train-subway mr-1"></i>交通</span>' : ''}
+      list.innerHTML = d.spots.map((s, i) => {
+        const markerColor = s.type === 'pass' ? 'bg-green-500' : s.type === 'flight' ? 'bg-sky-500' : 'bg-indigo-500';
+        if (s.type === 'flight') {
+          return `
+            <div class="relative group">
+              <div class="absolute -left-[33px] top-1 w-6 h-6 rounded-full border-2 border-white ${markerColor} shadow-sm flex items-center justify-center">
+                <span class="text-white text-[10px] font-bold">${i + 1}</span>
+              </div>
+              <div class="bg-white rounded-2xl shadow-sm border border-slate-200 mb-6 overflow-hidden hover:shadow-md transition-shadow">
+                <div class="p-5">
+                  <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+                    <span class="text-xs font-bold text-slate-500 bg-slate-50 px-2 py-1 rounded-md flex items-center"><i class="fa-regular fa-clock mr-1.5"></i>${s.time}</span>
+                    <span class="bg-sky-50 text-sky-600 text-[10px] font-bold px-2 py-1 rounded-md flex items-center"><i class="fa-solid fa-plane mr-1"></i>國內線航班</span>
+                  </div>
+                  <h3 class="font-bold text-slate-800 text-base mb-3">${s.name}</h3>
+                  <div class="bg-gradient-to-br from-indigo-600 via-indigo-500 to-blue-500 rounded-xl p-4 text-white">
+                    <div class="text-[10px] text-indigo-200 font-bold mb-3 tracking-wider">BOARDING PASS ✈ 釜山航空 AIR BUSAN</div>
+                    <div class="flex items-center justify-between mb-4">
+                      <div>
+                        <div class="text-3xl font-black tracking-tight">12:40</div>
+                        <div class="text-xs text-indigo-100 font-bold mt-0.5">PUS</div>
+                        <div class="text-[10px] text-indigo-200">金海機場 D</div>
+                      </div>
+                      <div class="text-center flex-1 px-2">
+                        <div class="text-[10px] text-indigo-200 mb-1">1h 05m</div>
+                        <div class="flex items-center">
+                          <div class="flex-1 h-px bg-white/30"></div>
+                          <i class="fa-solid fa-plane text-white text-xs mx-1.5"></i>
+                          <div class="flex-1 h-px bg-white/30"></div>
+                        </div>
+                        <div class="text-[9px] text-indigo-200 mt-1">BX 8808</div>
+                      </div>
+                      <div class="text-right">
+                        <div class="text-3xl font-black tracking-tight">13:45</div>
+                        <div class="text-xs text-indigo-100 font-bold mt-0.5">GMP</div>
+                        <div class="text-[10px] text-indigo-200">金浦機場 D</div>
+                      </div>
+                    </div>
+                    <div class="border-t border-dashed border-white/25 pt-3 grid grid-cols-2 gap-2 mb-2">
+                      <div class="bg-white/10 rounded-lg p-2.5">
+                        <div class="text-indigo-200 text-[9px] font-bold mb-1">旅客 1</div>
+                        <div class="font-bold text-sm">CHEN CHUNYI</div>
+                        <div class="text-indigo-200 text-[10px] mt-1">訂位 <span class="text-white font-black">XBB6D</span></div>
+                      </div>
+                      <div class="bg-white/10 rounded-lg p-2.5">
+                        <div class="text-indigo-200 text-[9px] font-bold mb-1">旅客 2</div>
+                        <div class="font-bold text-sm">FEI WU</div>
+                        <div class="text-indigo-200 text-[10px] mt-1 break-all text-[9px]">1616330634899188</div>
+                      </div>
+                    </div>
+                    <div class="text-center text-[10px] text-indigo-200/70">經濟艙 ｜ 空中巴士 A320 (中型)</div>
+                  </div>
+                  <div class="flex gap-2 border-t border-slate-100 pt-3 mt-3">
+                    <button onclick="nav('${s.naver}')" class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center">
+                      <i class="fa-solid fa-location-arrow mr-1.5"></i> NAVER 導航
+                    </button>
+                    <button onclick="copy('${s.naver}', this)" class="bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-bold px-4 py-2.5 rounded-lg transition-colors">
+                      複製韓文
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 class="font-bold text-slate-800 text-base mb-2">${s.name}</h3>
-            <p class="text-xs text-slate-600 mb-3 leading-relaxed">${s.desc}</p>
-            ${s.transport ? `<div class="mb-4 inline-block bg-indigo-50 text-indigo-600 text-xs font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-car-side mr-1.5"></i>${s.transport}</div>` : ''}
-            
-            <div class="flex gap-2 border-t border-slate-100 pt-3">
-              <button onclick="nav('${s.naver}')" class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center">
-                <i class="fa-solid fa-location-arrow mr-1.5"></i> NAVER 導航
-              </button>
-              <button onclick="copy('${s.naver}', this)" class="bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-bold px-4 py-2.5 rounded-lg transition-colors">
-                複製韓文
-              </button>
+          `;
+        }
+        return `
+          <div class="relative group">
+            <div class="absolute -left-[33px] top-1 w-6 h-6 rounded-full border-2 border-white ${markerColor} shadow-sm flex items-center justify-center">
+              <span class="text-white text-[10px] font-bold">${i + 1}</span>
+            </div>
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200 mb-6 hover:shadow-md transition-shadow">
+              <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+                <span class="text-xs font-bold text-slate-500 bg-slate-50 px-2 py-1 rounded-md flex items-center"><i class="fa-regular fa-clock mr-1.5"></i>${s.time}</span>
+                <div class="flex gap-1.5">
+                  ${s.type === 'shopping' ? '<span class="bg-pink-50 text-pink-600 text-[10px] font-bold px-2 py-1 rounded-md flex items-center"><i class="fa-solid fa-bag-shopping mr-1"></i>購物</span>' : ''}
+                  ${s.type === 'pass' ? '<span class="bg-green-50 text-green-600 text-[10px] font-bold px-2 py-1 rounded-md flex items-center"><i class="fa-solid fa-ticket mr-1"></i>VBP 免費</span>' : ''}
+                  ${s.type === 'food' ? '<span class="bg-orange-50 text-orange-600 text-[10px] font-bold px-2 py-1 rounded-md flex items-center"><i class="fa-solid fa-utensils mr-1"></i>美食</span>' : ''}
+                  ${s.type === 'sight' ? '<span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-2 py-1 rounded-md flex items-center"><i class="fa-solid fa-camera mr-1"></i>景點</span>' : ''}
+                  ${s.type === 'transit' ? '<span class="bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-1 rounded-md flex items-center"><i class="fa-solid fa-train-subway mr-1"></i>交通</span>' : ''}
+                </div>
+              </div>
+              <h3 class="font-bold text-slate-800 text-base mb-2">${s.name}</h3>
+              <p class="text-xs text-slate-600 mb-3 leading-relaxed">${s.desc}</p>
+              ${s.transport ? `<div class="mb-4 inline-block bg-indigo-50 text-indigo-600 text-xs font-medium px-2.5 py-1 rounded-md"><i class="fa-solid fa-car-side mr-1.5"></i>${s.transport}</div>` : ''}
+              <div class="flex gap-2 border-t border-slate-100 pt-3">
+                <button onclick="nav('${s.naver}')" class="flex-1 bg-green-500 hover:bg-green-600 text-white text-xs font-bold py-2.5 rounded-lg transition-colors flex items-center justify-center">
+                  <i class="fa-solid fa-location-arrow mr-1.5"></i> NAVER 導航
+                </button>
+                <button onclick="copy('${s.naver}', this)" class="bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-bold px-4 py-2.5 rounded-lg transition-colors">
+                  複製韓文
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      `).join('');
+        `;
+      }).join('');
       
       window.scrollTo({top:0, behavior:'smooth'});
+      fetchWeather(day);
+    }
+
+    function getWeatherInfo(wmo) {
+      if (wmo === 0) return { emoji: '☀️', desc: '晴天' };
+      if (wmo <= 3) return { emoji: '⛅', desc: '多雲' };
+      if (wmo <= 49) return { emoji: '🌫️', desc: '霧/薄霧' };
+      if (wmo <= 55) return { emoji: '🌦️', desc: '毛毛雨' };
+      if (wmo <= 65) return { emoji: '🌧️', desc: '降雨' };
+      if (wmo <= 77) return { emoji: '❄️', desc: '降雪' };
+      if (wmo <= 82) return { emoji: '🌦️', desc: '陣雨' };
+      if (wmo <= 86) return { emoji: '❄️', desc: '雪陣雨' };
+      return { emoji: '⛈️', desc: '雷雨' };
+    }
+
+    async function fetchWeather(day) {
+      const dateMap = {
+        1: { date: '2026-04-25', lat: 35.18, lon: 129.08 },
+        2: { date: '2026-04-26', lat: 35.18, lon: 129.08 },
+        3: { date: '2026-04-27', lat: 35.18, lon: 129.08 },
+        4: { date: '2026-04-28', lat: 35.18, lon: 129.08 },
+        5: { date: '2026-04-29', lat: 35.18, lon: 129.08 },
+        6: { date: '2026-04-30', lat: 37.57, lon: 126.98 },
+        7: { date: '2026-05-01', lat: 37.57, lon: 126.98 },
+        8: { date: '2026-05-02', lat: 37.57, lon: 126.98 }
+      };
+      const info = dateMap[day];
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${info.lat}&longitude=${info.lon}&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_sum&timezone=Asia%2FSeoul&start_date=${info.date}&end_date=${info.date}`;
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        const el = document.getElementById('weather-widget');
+        if (!el) return;
+        const t_max = Math.round(data.daily.temperature_2m_max[0]);
+        const t_min = Math.round(data.daily.temperature_2m_min[0]);
+        const wmo = data.daily.weather_code[0];
+        const rain = data.daily.precipitation_sum[0];
+        const wi = getWeatherInfo(wmo);
+        el.innerHTML = `<span class="text-xl leading-none">${wi.emoji}</span><div class="text-left ml-1"><div class="text-[10px] font-bold text-sky-700">${wi.desc}${rain > 0.5 ? ' ☔' : ''}</div><div class="text-[10px] text-sky-500">${t_min}° / ${t_max}°C</div></div>`;
+      } catch (e) {
+        const el = document.getElementById('weather-widget');
+        if (el) el.innerHTML = '<span class="text-[10px] text-slate-400">天氣暫不可用</span>';
+      }
     }
 
     function showTab(id) {
